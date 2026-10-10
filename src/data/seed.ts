@@ -166,19 +166,19 @@ export const sellerListings: SellerListing[] = [
 
 export const buyerOrders: Order[] = [
   {
-    id: 'o1', orderNumber: 'ZV-20483', productId: 'p1', sellerId: 'seller-2',
+    id: 'o1', orderNumber: 'UT-20483', productId: 'p1', sellerId: 'seller-2',
     sellerName: 'Kunle S.', buyerName: 'Tolu Bello', buyerId: 'user-1',
     status: 'out_for_delivery', amount: 19000, deliveryOption: 'campus',
     deliverySpot: 'Hall C, Room 204', createdAt: '2:14 PM', estimatedDelivery: '7:00 PM',
   },
   {
-    id: 'o2', orderNumber: 'ZV-20311', productId: 'p3', sellerId: 'seller-4',
+    id: 'o2', orderNumber: 'UT-20311', productId: 'p3', sellerId: 'seller-4',
     sellerName: 'Chuka E.', buyerName: 'Tolu Bello', buyerId: 'user-1',
     status: 'delivered', amount: 6000, deliveryOption: 'campus',
     deliverySpot: 'Hall C, Room 204', createdAt: 'Yesterday 11am',
   },
   {
-    id: 'o3', orderNumber: 'ZV-20277', productId: 'p2', sellerId: 'seller-3',
+    id: 'o3', orderNumber: 'UT-20277', productId: 'p2', sellerId: 'seller-3',
     sellerName: "Amaka's Kitchen", buyerName: 'Tolu Bello', buyerId: 'user-1',
     status: 'delivered', amount: 3000, deliveryOption: 'campus',
     deliverySpot: 'Hall C, Room 204', createdAt: 'Sunday 6pm',
@@ -187,31 +187,31 @@ export const buyerOrders: Order[] = [
 
 export const sellerOrders: Order[] = [
   {
-    id: 'so1', orderNumber: 'ZV-20491', productId: 'l1', sellerId: 'seller-1',
+    id: 'so1', orderNumber: 'UT-20491', productId: 'l1', sellerId: 'seller-1',
     sellerName: "Tolu's Treats", buyerName: 'Ife B.', buyerId: 'buyer-2',
     status: 'new', amount: 4000, deliveryOption: 'campus',
     deliverySpot: 'Hall B, Room 112', createdAt: 'Today 2:00 PM', estimatedDelivery: '6:00 PM',
   },
   {
-    id: 'so2', orderNumber: 'ZV-20490', productId: 'l2', sellerId: 'seller-1',
+    id: 'so2', orderNumber: 'UT-20490', productId: 'l2', sellerId: 'seller-1',
     sellerName: "Tolu's Treats", buyerName: 'Kemi A.', buyerId: 'buyer-3',
     status: 'new', amount: 3000, deliveryOption: 'pickup',
     deliverySpot: 'Library', createdAt: 'Today 1:30 PM',
   },
   {
-    id: 'so3', orderNumber: 'ZV-20489', productId: 'l3', sellerId: 'seller-1',
+    id: 'so3', orderNumber: 'UT-20489', productId: 'l3', sellerId: 'seller-1',
     sellerName: "Tolu's Treats", buyerName: 'Seun O.', buyerId: 'buyer-4',
     status: 'preparing', amount: 2000, deliveryOption: 'campus',
     deliverySpot: 'Hall A, Room 301', createdAt: 'Today 12:00 PM', estimatedDelivery: '7:00 PM',
   },
   {
-    id: 'so4', orderNumber: 'ZV-20485', productId: 'l4', sellerId: 'seller-1',
+    id: 'so4', orderNumber: 'UT-20485', productId: 'l4', sellerId: 'seller-1',
     sellerName: "Tolu's Treats", buyerName: 'Bayo T.', buyerId: 'buyer-5',
     status: 'delivered', amount: 1800, deliveryOption: 'pickup',
     deliverySpot: 'Hall A gate', createdAt: 'Yesterday',
   },
   {
-    id: 'so5', orderNumber: 'ZV-20481', productId: 'l5', sellerId: 'seller-1',
+    id: 'so5', orderNumber: 'UT-20481', productId: 'l5', sellerId: 'seller-1',
     sellerName: "Tolu's Treats", buyerName: 'Ada N.', buyerId: 'buyer-6',
     status: 'delivered', amount: 3000, deliveryOption: 'campus',
     deliverySpot: 'Hall D, Room 22', createdAt: '2 days ago',
@@ -269,11 +269,11 @@ export const adminReports: AdminReport[] = [
 ]
 
 export const adminTransactions: AdminTransaction[] = [
-  { id: 'at1', orderNumber: 'ZV-20483', item: 'Sneakers', buyer: 'Tolu', seller: 'Kunle', amount: 19000, status: 'completed' },
-  { id: 'at2', orderNumber: 'ZV-20482', item: 'Jollof pack', buyer: 'Ife', seller: 'Amaka', amount: 2500, status: 'completed' },
-  { id: 'at3', orderNumber: 'ZV-20480', item: 'Phone', buyer: 'Seyi', seller: 'Anon_204', amount: 45000, status: 'flagged' },
-  { id: 'at4', orderNumber: 'ZV-20478', item: 'Textbook', buyer: 'Kemi', seller: 'Chuka', amount: 6000, status: 'refunded' },
-  { id: 'at5', orderNumber: 'ZV-20475', item: 'Braids', buyer: 'Ada', seller: 'Ife', amount: 8000, status: 'completed' },
+  { id: 'at1', orderNumber: 'UT-20483', item: 'Sneakers', buyer: 'Tolu', seller: 'Kunle', amount: 19000, status: 'completed' },
+  { id: 'at2', orderNumber: 'UT-20482', item: 'Jollof pack', buyer: 'Ife', seller: 'Amaka', amount: 2500, status: 'completed' },
+  { id: 'at3', orderNumber: 'UT-20480', item: 'Phone', buyer: 'Seyi', seller: 'Anon_204', amount: 45000, status: 'flagged' },
+  { id: 'at4', orderNumber: 'UT-20478', item: 'Textbook', buyer: 'Kemi', seller: 'Chuka', amount: 6000, status: 'refunded' },
+  { id: 'at5', orderNumber: 'UT-20475', item: 'Braids', buyer: 'Ada', seller: 'Ife', amount: 8000, status: 'completed' },
 ]
 
 export const adCampaigns: AdCampaign[] = [

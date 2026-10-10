@@ -86,7 +86,7 @@ export default function SellerOrders() {
                   <Button size="s" fullWidth={false} className="flex-1" onClick={() => navigate(`/seller/order/${order.id}`)}>Open order</Button>
                 )}
                 {tab === 'Completed' && (
-                  <p className="text-xs text-mute">Fee ₦{fee} paid to ZENVORA</p>
+                  <p className="text-xs text-mute">Fee ₦{fee} paid to UNITRADZ</p>
                 )}
               </div>
             </div>

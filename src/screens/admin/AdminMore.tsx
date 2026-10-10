@@ -19,7 +19,7 @@ export default function AdminMore() {
     <div className="flex flex-col min-h-screen bg-bg">
       <div className="px-[18px] pt-12 pb-4">
         <h1 className="text-[21px] font-extrabold text-ink">More</h1>
-        <p className="text-sm text-mute">ZENVORA admin · Greenfield University</p>
+        <p className="text-sm text-mute">UNITRADZ admin · Greenfield University</p>
       </div>
 
       <div className="flex-1 px-[18px] flex flex-col gap-3 pb-6">

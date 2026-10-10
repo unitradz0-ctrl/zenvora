@@ -10,7 +10,7 @@ import { useStore } from '../../store/useStore'
 const reasons = [
   { id: 'not_described', label: 'Not as described', sub: 'The item is different from what was shown' },
   { id: 'scam', label: 'Suspected scam', sub: 'I think this seller is trying to scam buyers' },
-  { id: 'prohibited', label: 'Prohibited item', sub: 'This item is not allowed on ZENVORA' },
+  { id: 'prohibited', label: 'Prohibited item', sub: 'This item is not allowed on UNITRADZ' },
   { id: 'wrong_price', label: 'Wrong price', sub: 'The price seems misleading or wrong' },
   { id: 'offensive', label: 'Offensive content', sub: 'This listing contains offensive material' },
 ]

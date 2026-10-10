@@ -51,7 +51,7 @@ export default function SignUp() {
         />
 
         <p className="text-sm text-mute text-center">
-          By continuing you agree to the ZENVORA <span className="text-violet font-semibold">terms</span> and <span className="text-violet font-semibold">community rules</span>.
+          By continuing you agree to the UNITRADZ <span className="text-violet font-semibold">terms</span> and <span className="text-violet font-semibold">community rules</span>.
         </p>
 
         <Button onClick={handleCreate}>Create account</Button>

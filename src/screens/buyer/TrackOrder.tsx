@@ -31,7 +31,7 @@ export default function TrackOrder() {
           <div className="h-[6px] rounded-full bg-white/20 mt-3 mb-2">
             <div className="h-full bg-gold rounded-full" style={{ width: '68%' }} />
           </div>
-          <Tag variant="gold">Order #ZV-20483</Tag>
+          <Tag variant="gold">Order #UT-20483</Tag>
         </div>
 
         {/* Stepper */}

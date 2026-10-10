@@ -30,7 +30,7 @@ export default function AdminOverview() {
       {/* Header */}
       <div className="px-[18px] pt-12 pb-4">
         <h1 className="text-[21px] font-extrabold text-ink">Overview</h1>
-        <p className="text-sm text-mute">ZENVORA admin · Greenfield University</p>
+        <p className="text-sm text-mute">UNITRADZ admin · Greenfield University</p>
       </div>
 
       <div className="flex-1 overflow-y-auto px-[18px] flex flex-col gap-4 pb-6">

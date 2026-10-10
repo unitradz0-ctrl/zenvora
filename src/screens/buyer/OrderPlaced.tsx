@@ -18,7 +18,7 @@ export default function OrderPlaced() {
   const location = useLocation()
   const state = (location.state as OrderState) || {}
 
-  const orderNumber = state.orderNumber || 'ZV-20483'
+  const orderNumber = state.orderNumber || 'UT-20483'
   const product = products.find(p => p.id === state.productId) || products[0]
   const total = state.total ?? 19000
   const deliveryLabel = state.deliveryOption === 'pickup' ? 'Pickup' : 'Campus delivery'

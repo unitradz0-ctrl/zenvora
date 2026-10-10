@@ -19,7 +19,7 @@ export default function Checkout() {
     clearCart()
     navigate('/order-placed', {
       state: {
-        orderNumber: `ZV-${20480 + Math.floor(Math.random() * 20)}`,
+        orderNumber: `UT-${20480 + Math.floor(Math.random() * 20)}`,
         productId: firstItem?.productId || 'p1',
         total,
         deliveryOption,
@@ -66,7 +66,7 @@ export default function Checkout() {
               selected={paymentMethod === 'wallet'}
               onSelect={() => setPaymentMethod('wallet')}
               icon={<Wallet size={18} className="text-violet" />}
-              title="ZENVORA wallet"
+              title="UNITRADZ wallet"
               subtitle="Balance ₦3,200"
             />
           </div>

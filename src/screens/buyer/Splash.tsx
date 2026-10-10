@@ -27,7 +27,7 @@ export default function Splash() {
           className="text-[34px] font-black text-white"
           style={{ letterSpacing: '0.2em' }}
         >
-          ZENVORA
+          UNITRADZ
         </h1>
         {/* Tagline */}
         <p className="text-[17px] text-white/85 text-center max-w-[240px] leading-snug">
