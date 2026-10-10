@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
-  ShoppingBag, List, MessageCircle, Heart,
+  ShoppingBag, List, Heart,
   ChevronRight, Settings, ShieldCheck, LogOut
 } from 'lucide-react'
 import Navbar from '../../components/layout/Navbar'
@@ -12,10 +12,10 @@ import { useStore, fmt } from '../../store/useStore'
 import { buyerOrders } from '../../data/seed'
 
 const quickActions = [
-  { icon: <ShoppingBag size={18} className="text-accent" />, label: 'My Orders', to: '/orders', bg: '#EFF6FF' },
-  { icon: <List size={18} className="text-accent" />, label: 'My Listings', to: '/seller/listings', bg: '#EFF6FF' },
-  { icon: <MessageCircle size={18} className="text-accent" />, label: 'Messages', to: '/chat/inbox', bg: '#EFF6FF' },
-  { icon: <Heart size={18} className="text-accent" />, label: 'Saved Items', to: '/wishlist', bg: '#EFF6FF' },
+  { icon: <ShoppingBag size={18} className="text-accent" />, label: 'My Orders',   to: '/orders',           bg: '#EFF6FF' },
+  { icon: <List size={18} className="text-accent" />,        label: 'My Listings', to: '/seller/listings',  bg: '#EFF6FF' },
+  { icon: <Heart size={18} className="text-accent" />,       label: 'Saved Items', to: '/wishlist',         bg: '#EFF6FF' },
+  { icon: <ShieldCheck size={18} className="text-accent" />, label: 'Verify',      to: '/verify/method',    bg: '#EFF6FF' },
 ]
 
 const statusColor: Record<string, string> = {

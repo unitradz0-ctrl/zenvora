@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { MessageCircle, Phone } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import TopBar from '../../components/ui/TopBar'
 import Button from '../../components/ui/Button'
 import BottomActionBar from '../../components/ui/BottomActionBar'
@@ -46,13 +46,6 @@ export default function TrackOrder() {
             <p className="text-[14px] font-bold text-ink">Musa A.</p>
             <p className="text-xs text-mute">Campus delivery agent</p>
           </div>
-          <button
-            aria-label="Chat with delivery agent"
-            onClick={() => navigate(`/chat/agent-${id}`)}
-            className="w-[38px] h-[38px] rounded-full border border-line flex items-center justify-center"
-          >
-            <MessageCircle size={16} className="text-ink" />
-          </button>
           <button
             aria-label="Call delivery agent"
             className="w-[38px] h-[38px] rounded-full border border-line flex items-center justify-center"

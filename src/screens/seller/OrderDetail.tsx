@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { MessageCircle, MapPin } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 import TopBar from '../../components/ui/TopBar'
 import Button from '../../components/ui/Button'
 import BottomActionBar from '../../components/ui/BottomActionBar'
@@ -42,11 +42,10 @@ export default function OrderDetail() {
             </div>
           </div>
           <button
-            aria-label="Chat with buyer"
-            onClick={() => navigate(`/chat/${order.buyerId}`)}
+            aria-label="Call buyer"
             className="w-[38px] h-[38px] rounded-full border border-line flex items-center justify-center"
           >
-            <MessageCircle size={16} className="text-ink" />
+            <span className="text-ink text-sm">📞</span>
           </button>
         </div>
 

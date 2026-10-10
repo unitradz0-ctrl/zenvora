@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { Heart, Share2, ChevronRight, ShieldCheck, MessageCircle, Flag } from 'lucide-react'
+import { Heart, Share2, ChevronRight, ShieldCheck, Flag } from 'lucide-react'
 import Button from '../../components/ui/Button'
 import BottomActionBar from '../../components/ui/BottomActionBar'
 import Tag from '../../components/ui/Tag'
@@ -154,13 +154,6 @@ export default function ProductDetail() {
       </div>
 
       <BottomActionBar>
-        <button
-          onClick={() => navigate(`/chat/${seller.id}`)}
-          aria-label="Chat with seller"
-          className="w-[50px] h-[50px] rounded-full border border-[1.5px] border-violet flex items-center justify-center shrink-0"
-        >
-          <MessageCircle size={22} className="text-violet" />
-        </button>
         <Button variant="ghost" className="flex-1" onClick={() => { addToCart(product.id); navigate('/cart') }}>
           Add to cart
         </Button>

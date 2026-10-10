@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ShieldCheck, MessageCircle } from 'lucide-react'
+import { ShieldCheck } from 'lucide-react'
 import Button from '../../components/ui/Button'
 import SegmentedControl from '../../components/ui/SegmentedControl'
 import ProductTile from '../../components/ui/ProductTile'
@@ -46,13 +46,6 @@ export default function SellerProfile() {
             fullWidth={false}
           >
             Follow
-          </Button>
-          <Button
-            size="s"
-            onClick={() => navigate(`/chat/${seller.id}`)}
-            fullWidth={false}
-          >
-            Message
           </Button>
         </div>
       </div>

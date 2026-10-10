@@ -1,13 +1,13 @@
 import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { Home, Users, Plus, MessageCircle, User } from 'lucide-react'
+import { Home, Users, Plus, ShoppingBag, User } from 'lucide-react'
 
 const tabs = [
-  { to: '/home',       icon: Home,          label: 'Home' },
-  { to: '/communities', icon: Users,         label: 'Communities' },
-  { to: null,          icon: Plus,          label: '',     isCentre: true },
-  { to: '/chat/inbox', icon: MessageCircle, label: 'Messages' },
-  { to: '/profile',    icon: User,          label: 'Profile' },
+  { to: '/home',        icon: Home,        label: 'Home' },
+  { to: '/communities', icon: Users,        label: 'Communities' },
+  { to: null,           icon: Plus,         label: '',      isCentre: true },
+  { to: '/orders',      icon: ShoppingBag,  label: 'Orders' },
+  { to: '/profile',     icon: User,         label: 'Profile' },
 ]
 
 export default function BottomTabBar() {

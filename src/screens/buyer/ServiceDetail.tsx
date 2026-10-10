@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ShieldCheck, MessageCircle } from 'lucide-react'
+import { ShieldCheck } from 'lucide-react'
 import Button from '../../components/ui/Button'
 import BottomActionBar from '../../components/ui/BottomActionBar'
 import Tag from '../../components/ui/Tag'
@@ -93,13 +93,6 @@ export default function ServiceDetail() {
       </div>
 
       <BottomActionBar>
-        <button
-          onClick={() => navigate(`/chat/${svc.sellerId}`)}
-          aria-label="Chat with seller"
-          className="w-[50px] h-[50px] rounded-full border border-[1.5px] border-violet flex items-center justify-center shrink-0"
-        >
-          <MessageCircle size={22} className="text-violet" />
-        </button>
         <Button className="flex-1" onClick={() => navigate('/cart')}>
           Request service · {fmt(activePkg.price)}
         </Button>

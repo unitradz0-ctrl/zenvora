@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-
-// Global UI
+import { AuthProvider } from './lib/AuthContext'
 import ToastContainer from './components/ui/Toast'
 
 // Buyer screens
@@ -24,7 +23,6 @@ import Filters from './screens/buyer/Filters'
 import ProductDetail from './screens/buyer/ProductDetail'
 import ServiceDetail from './screens/buyer/ServiceDetail'
 import SellerProfile from './screens/buyer/SellerProfile'
-import Chat from './screens/buyer/Chat'
 import Cart from './screens/buyer/Cart'
 import Checkout from './screens/buyer/Checkout'
 import OrderPlaced from './screens/buyer/OrderPlaced'
@@ -62,6 +60,7 @@ import AdminAds from './screens/admin/AdminAds'
 
 export default function App() {
   return (
+    <AuthProvider>
     <BrowserRouter>
       <div className="min-h-screen bg-slate-800 flex items-start justify-center">
         <div className="relative w-full max-w-[430px] min-h-screen bg-bg overflow-hidden">
@@ -89,7 +88,6 @@ export default function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/service/:id" element={<ServiceDetail />} />
             <Route path="/seller-profile/:id" element={<SellerProfile />} />
-            <Route path="/chat/:id" element={<Chat />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-placed" element={<OrderPlaced />} />
@@ -132,5 +130,6 @@ export default function App() {
         </div>
       </div>
     </BrowserRouter>
+    </AuthProvider>
   )
 }

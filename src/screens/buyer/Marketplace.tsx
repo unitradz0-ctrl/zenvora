@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Search, SlidersHorizontal, Star, ChevronDown } from 'lucide-react'
 import Navbar from '../../components/layout/Navbar'
 import BottomTabBar from '../../components/layout/BottomTabBar'
 import { products, services } from '../../data/seed'
+import { fetchListings, fetchServices } from '../../lib/api'
 import { useStore, fmt } from '../../store/useStore'
 
 const tabs = ['All', 'Products', 'Services', 'Businesses']
@@ -13,13 +14,26 @@ export default function Marketplace() {
   const { wishlist, toggleWishlist } = useStore()
   const [tab, setTab] = useState('All')
   const [query, setQuery] = useState('')
+  const [dbProducts, setDbProducts] = useState<any[]>([])
+  const [dbServices, setDbServices] = useState<any[]>([])
 
-  const showProducts = tab === 'All' || tab === 'Products'
-  const showServices = tab === 'All' || tab === 'Services'
+  // Load from DB, fall back to seed data
+  useEffect(() => {
+    fetchListings({ limit: 50 }).then(({ data }) => {
+      if (data && data.length > 0) setDbProducts(data)
+      else setDbProducts(products)
+    }).catch(() => setDbProducts(products))
 
-  const filteredProducts = products.filter(p =>
+    fetchServices().then(({ data }) => {
+      if (data && data.length > 0) setDbServices(data)
+      else setDbServices(services)
+    }).catch(() => setDbServices(services))
+  }, [])
+
+  const displayProducts = (dbProducts.length > 0 ? dbProducts : products).filter(p =>
     query ? p.title.toLowerCase().includes(query.toLowerCase()) : true
   )
+  const displayServices = dbServices.length > 0 ? dbServices : services
 
   return (
     <div className="flex flex-col min-h-screen bg-bg pb-16">
@@ -74,10 +88,10 @@ export default function Marketplace() {
         </div>
 
         {/* Product grid */}
-        {showProducts && (
+        {(tab === 'All' || tab === 'Products') && (
           <div className="px-4 mb-4">
             <div className="grid grid-cols-2 gap-3">
-              {filteredProducts.map(p => {
+              {displayProducts.map((p: any) => {
                 const saved = wishlist.has(p.id)
                 const origPrice = Math.round(p.price * 1.25)
                 return (
