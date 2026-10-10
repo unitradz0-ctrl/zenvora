@@ -15,7 +15,7 @@ export default function Toggle({ checked, onChange, label, ariaLabel }: TogglePr
       aria-checked={checked}
       aria-label={ariaLabel || label}
       onClick={() => onChange(!checked)}
-      className={`relative inline-flex items-center shrink-0 w-[46px] h-[28px] rounded-full transition-colors ${checked ? 'bg-teal' : 'bg-[#CFC9EA]'}`}
+      className={`relative inline-flex items-center shrink-0 w-[46px] h-[28px] rounded-full transition-colors ${checked ? 'bg-accent' : 'bg-slate-200'}`}
     >
       <span
         className={`absolute w-[22px] h-[22px] bg-white rounded-full shadow transition-transform ${checked ? 'translate-x-[21px]' : 'translate-x-[3px]'}`}

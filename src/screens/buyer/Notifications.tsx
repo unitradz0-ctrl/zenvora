@@ -1,6 +1,5 @@
 import React from 'react'
 import TopBar from '../../components/ui/TopBar'
-import BuyerTabBar from '../../components/layout/BuyerTabBar'
 import { notifications } from '../../data/seed'
 
 export default function Notifications() {
@@ -53,7 +52,7 @@ export default function Notifications() {
           ))}
         </div>
       </div>
-      <BuyerTabBar />
+      <BottomTabBar />
     </div>
   )
 }

@@ -4,7 +4,6 @@ import { SlidersHorizontal } from 'lucide-react'
 import SearchBar from '../../components/ui/SearchBar'
 import Chip from '../../components/ui/Chip'
 import HorizontalProductRow from '../../components/ui/HorizontalProductRow'
-import BuyerTabBar from '../../components/layout/BuyerTabBar'
 import { products } from '../../data/seed'
 import { SCHOOL } from '../../data/seed'
 
@@ -157,7 +156,7 @@ export default function Results() {
       )}
 
       <div className="h-6" />
-      <BuyerTabBar />
+      <BottomTabBar />
     </div>
   )
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import SegmentedControl from '../../components/ui/SegmentedControl'
-import BuyerTabBar from '../../components/layout/BuyerTabBar'
 import Tag from '../../components/ui/Tag'
 import Button from '../../components/ui/Button'
 import { products } from '../../data/seed'
@@ -65,7 +64,7 @@ export default function MyOrders() {
         })}
       </div>
 
-      <BuyerTabBar />
+      <BottomTabBar />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-// Components
+// Global UI
 import ToastContainer from './components/ui/Toast'
 
 // Buyer screens
@@ -13,6 +13,7 @@ import VerifyCode from './screens/buyer/VerifyCode'
 import Verified from './screens/buyer/Verified'
 import Home from './screens/buyer/Home'
 import Explore from './screens/buyer/Explore'
+import Communities from './screens/buyer/Communities'
 import Search from './screens/buyer/Search'
 import Results from './screens/buyer/Results'
 import Filters from './screens/buyer/Filters'
@@ -55,33 +56,11 @@ import AdminCategories from './screens/admin/AdminCategories'
 import AdminTransactions from './screens/admin/AdminTransactions'
 import AdminAds from './screens/admin/AdminAds'
 
-// Admin shortcut component (top-right link on buyer home — for demo)
-function AdminAccessBar() {
-  return (
-    <div className="fixed top-2 right-2 z-50 flex gap-1">
-      <a
-        href="/admin/overview"
-        className="bg-ink/80 text-white text-[10px] font-bold rounded-full px-2 py-1"
-      >
-        Admin
-      </a>
-      <a
-        href="/seller/dashboard"
-        className="bg-violet/80 text-white text-[10px] font-bold rounded-full px-2 py-1"
-      >
-        Seller
-      </a>
-    </div>
-  )
-}
-
 export default function App() {
   return (
     <BrowserRouter>
-      {/* Desktop wrapper — centers at 390-430px on desktop */}
-      <div className="min-h-screen bg-[#15103A] flex items-start justify-center">
+      <div className="min-h-screen bg-slate-800 flex items-start justify-center">
         <div className="relative w-full max-w-[430px] min-h-screen bg-bg overflow-hidden">
-          <AdminAccessBar />
           <ToastContainer />
           <Routes>
             {/* Onboarding */}
@@ -95,6 +74,7 @@ export default function App() {
             {/* Buyer */}
             <Route path="/home" element={<Home />} />
             <Route path="/explore" element={<Explore />} />
+            <Route path="/communities" element={<Communities />} />
             <Route path="/search" element={<Search />} />
             <Route path="/results" element={<Results />} />
             <Route path="/filters" element={<Filters />} />
@@ -112,6 +92,7 @@ export default function App() {
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/report" element={<ReportListing />} />
+            <Route path="/dispatch" element={<Navigate to="/home" replace />} />
 
             {/* Seller */}
             <Route path="/seller/setup" element={<SellerSetup />} />

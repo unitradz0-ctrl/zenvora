@@ -10,6 +10,8 @@ export interface Product {
   id: string
   title: string
   price: number
+  originalPrice?: number
+  image?: string
   emoji: string
   tileColor: string
   seller: string
@@ -25,12 +27,14 @@ export interface Product {
   views?: number
   pickupSpot?: string
   offerDelivery?: boolean
+  badge?: string
 }
 
 export interface Service {
   id: string
   title: string
   fromPrice: number
+  originalPrice?: number
   emoji: string
   tileColor: string
   seller: string
@@ -39,6 +43,8 @@ export interface Service {
   rating: number
   reviewCount: number
   packages: ServicePackage[]
+  image?: string
+  badge?: string
 }
 
 export interface ServicePackage {
@@ -92,6 +98,24 @@ export interface Seller {
   replyTime: string
   avatarColor: string
   school: string
+}
+
+export interface Community {
+  id: string
+  name: string
+  university: string
+  members: string
+  type: string
+  image?: string
+  color: string
+}
+
+export interface Brand {
+  id: string
+  name: string
+  category: string
+  logo: string
+  color: string
 }
 
 export interface Notification {

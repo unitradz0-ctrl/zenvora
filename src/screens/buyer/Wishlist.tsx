@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import TopBar from '../../components/ui/TopBar'
 import ProductTile from '../../components/ui/ProductTile'
 import EmptyState from '../../components/ui/EmptyState'
-import BuyerTabBar from '../../components/layout/BuyerTabBar'
 import { products } from '../../data/seed'
 import { useStore } from '../../store/useStore'
 
@@ -33,7 +32,7 @@ export default function Wishlist() {
           </>
         )}
       </div>
-      <BuyerTabBar />
+      <BottomTabBar />
     </div>
   )
 }

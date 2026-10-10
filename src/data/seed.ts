@@ -1,6 +1,7 @@
 import type {
   Product, Service, Seller, Order, Review, Notification, Category,
-  AdminVerificationRequest, AdminReport, AdminTransaction, AdCampaign, SellerListing
+  AdminVerificationRequest, AdminReport, AdminTransaction, AdCampaign, SellerListing,
+  Community, Brand
 } from '../types'
 
 export const SCHOOL = 'Greenfield University'
@@ -306,3 +307,27 @@ export const chartData7 = [
   { day: 'S', value: 42500, highlight: true },
   { day: 'S', value: 8900, highlight: false },
 ]
+
+export const communities: Community[] = [
+  { id: 'com1', name: 'Dennis Osadebay University (DOU)', university: 'Dennis Osadebay University', members: '12.4k', type: 'Students', color: '#0A2463' },
+  { id: 'com2', name: 'UNILAG Community', university: 'University of Lagos', members: '20.7k', type: 'Students', color: '#1E3A5F' },
+  { id: 'com3', name: 'UNIABUJA Community', university: 'University of Abuja', members: '13.2k', type: 'Students', color: '#0D3B6E' },
+  { id: 'com4', name: 'Global Community', university: 'All Universities', members: '105k+', type: 'Students', color: '#1A3A8F' },
+  { id: 'com5', name: 'OAU Community', university: 'Obafemi Awolowo University', members: '18.9k', type: 'Students', color: '#0A4F8C' },
+  { id: 'com6', name: 'FUTA Community', university: 'Fed. University of Tech. Akure', members: '9.3k', type: 'Students', color: '#0C3B6E' },
+]
+
+export const brands: Brand[] = [
+  { id: 'b1', name: 'Nike', category: 'Fashion & Sports', logo: '✔', color: '#000000' },
+  { id: 'b2', name: 'Apple', category: 'Electronics & Tech', logo: '', color: '#555555' },
+  { id: 'b3', name: 'Samsung', category: 'Electronics & Tech', logo: '◈', color: '#1428A0' },
+  { id: 'b4', name: 'Adidas', category: 'Fashion & Sports', logo: '⋀', color: '#000000' },
+  { id: 'b5', name: 'HP', category: 'Computers & Office', logo: '⬡', color: '#0096D6' },
+  { id: 'b6', name: 'SHEIN', category: 'Fashion', logo: 'S', color: '#000000' },
+]
+
+export const trendingProducts = products.map((p, i) => ({
+  ...p,
+  originalPrice: i % 2 === 0 ? Math.round(p.price * 1.2) : undefined,
+  badge: i === 0 ? 'Service' : i === 1 ? 'Product' : i === 2 ? 'Digital Product' : i === 3 ? 'Service' : 'Product',
+}))
