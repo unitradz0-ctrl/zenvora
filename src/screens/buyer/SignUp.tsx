@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Eye, EyeOff, ChevronLeft } from 'lucide-react'
+import { Eye, EyeOff, ChevronLeft, ArrowRight } from 'lucide-react'
 import Button from '../../components/ui/Button'
 import { Input } from '../../components/ui/Input'
 import { useStore } from '../../store/useStore'
@@ -8,41 +8,43 @@ import { useStore } from '../../store/useStore'
 export default function SignUp() {
   const navigate = useNavigate()
   const { login } = useStore()
-  const [name, setName] = useState('Tolu Bello')
-  const [email, setEmail] = useState('tolu@greenfield.edu.ng')
-  const [phone, setPhone] = useState('08012345678')
-  const [password, setPassword] = useState('password')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [password, setPassword] = useState('')
   const [showPass, setShowPass] = useState(false)
   const [isLogin, setIsLogin] = useState(false)
 
   const handleSubmit = () => {
     login()
-    navigate('/verify/method')
+    navigate('/home')
   }
 
   return (
     <div className="min-h-screen bg-bg flex flex-col">
       {/* Header */}
-      <div className="bg-nav-gradient px-4 pt-12 pb-8">
+      <div className="bg-primary px-4 pt-12 pb-7">
         <button onClick={() => navigate(-1)} className="mb-4">
           <ChevronLeft size={22} className="text-white" />
         </button>
-        <div className="flex items-center gap-2 mb-1">
+        <div className="flex items-center gap-2 mb-3">
           <div className="w-7 h-7 bg-white rounded-sm flex items-center justify-center">
-            <span className="text-primary font-black text-[13px]">U</span>
+            <span className="text-primary font-black text-[13px]">Z</span>
           </div>
           <span className="text-white font-extrabold text-lg">UNITRADZ</span>
         </div>
-        <h1 className="text-white text-[22px] font-extrabold mt-3">
+        <h1 className="text-white text-[22px] font-extrabold">
           {isLogin ? 'Welcome back' : 'Create your account'}
         </h1>
         <p className="text-white/65 text-sm mt-1">
-          {isLogin ? 'Log in to continue' : 'Join millions of students worldwide'}
+          {isLogin
+            ? 'Log in to continue'
+            : 'Anyone can join — students, professionals, and businesses.'}
         </p>
       </div>
 
       {/* Form */}
-      <div className="flex-1 px-4 py-6 flex flex-col gap-4">
+      <div className="flex-1 px-4 py-5 flex flex-col gap-4">
         {/* Toggle */}
         <div className="flex bg-line rounded-lg p-1">
           <button
@@ -75,7 +77,7 @@ export default function SignUp() {
               value={password}
               onChange={e => setPassword(e.target.value)}
               type={showPass ? 'text' : 'password'}
-              placeholder="Create a strong password"
+              placeholder="Enter password"
               className="w-full h-[46px] border border-line rounded-lg px-4 pr-12 text-sm text-ink placeholder:text-mute outline-none focus:border-accent bg-white"
             />
             <button
@@ -97,26 +99,49 @@ export default function SignUp() {
         {/* Divider */}
         <div className="flex items-center gap-3">
           <div className="flex-1 h-px bg-line" />
-          <span className="text-mute text-xs">or continue with</span>
+          <span className="text-mute text-xs">or</span>
           <div className="flex-1 h-px bg-line" />
         </div>
 
-        {/* Social */}
+        {/* Social logins */}
         <div className="flex gap-3">
-          {['G', 'f', 'in'].map(s => (
+          {[
+            { label: 'G', name: 'Google' },
+            { label: 'f', name: 'Facebook' },
+            { label: 'in', name: 'LinkedIn' },
+          ].map(s => (
             <button
-              key={s}
+              key={s.name}
+              aria-label={`Continue with ${s.name}`}
               className="flex-1 h-11 border border-line rounded-lg bg-white flex items-center justify-center font-bold text-ink text-sm"
             >
-              {s}
+              {s.label}
             </button>
           ))}
         </div>
 
+        {/* Guest option */}
+        <button
+          onClick={() => navigate('/home')}
+          className="flex items-center justify-center gap-2 py-3 text-mute text-sm font-semibold"
+        >
+          Continue browsing as guest
+          <ArrowRight size={15} className="text-mute" />
+        </button>
+
+        {/* Student verification note */}
+        <div className="bg-blue-soft border border-accent/20 rounded-lg p-3">
+          <p className="text-[12px] text-accent font-semibold mb-1">🎓 Are you a student?</p>
+          <p className="text-[11px] text-mute leading-snug">
+            You can optionally verify your student status after signing up to get a verified badge.
+            It's not required to browse or buy.
+          </p>
+        </div>
+
         <p className="text-xs text-mute text-center">
           By continuing you agree to the UNITRADZ{' '}
-          <span className="text-accent font-semibold">terms</span> and{' '}
-          <span className="text-accent font-semibold">community rules</span>.
+          <span className="text-accent font-semibold">Terms</span> and{' '}
+          <span className="text-accent font-semibold">Community Rules</span>.
         </p>
       </div>
     </div>
