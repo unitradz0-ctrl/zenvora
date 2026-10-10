@@ -1,5 +1,6 @@
 import React from 'react'
 import TopBar from '../../components/ui/TopBar'
+import BottomTabBar from '../../components/layout/BottomTabBar'
 import { notifications } from '../../data/seed'
 
 export default function Notifications() {

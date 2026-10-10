@@ -14,6 +14,10 @@ import Verified from './screens/buyer/Verified'
 import Home from './screens/buyer/Home'
 import Explore from './screens/buyer/Explore'
 import Communities from './screens/buyer/Communities'
+import Marketplace from './screens/buyer/Marketplace'
+import Services from './screens/buyer/Services'
+import Delivery from './screens/buyer/Delivery'
+import Brands from './screens/buyer/Brands'
 import Search from './screens/buyer/Search'
 import Results from './screens/buyer/Results'
 import Filters from './screens/buyer/Filters'
@@ -75,6 +79,10 @@ export default function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/communities" element={<Communities />} />
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/delivery" element={<Delivery />} />
+            <Route path="/brands" element={<Brands />} />
             <Route path="/search" element={<Search />} />
             <Route path="/results" element={<Results />} />
             <Route path="/filters" element={<Filters />} />
